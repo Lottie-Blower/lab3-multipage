@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -15,26 +16,30 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+   
+<!-- Contact Form -->
+<section class="contact-form">
+    <form id="contactForm">
+        <!-- Place this under your form -->
 
-    <!-- Contact Form -->
-    <section class="contact-form">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <button type="submit">Send Message</button>
+        
+        <div id="response" style="margin-top: 10px; color: green;"></div>
+    </form>
+    <div id="messageContainer"></div>
+</section>
 
     <!-- Footer -->
     <footer>

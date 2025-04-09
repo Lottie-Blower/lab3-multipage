@@ -7,7 +7,7 @@ body {
 
 nav {
     background-color: hsl(0, 2%, 80%);
-    color: #070707;
+    color: #0e0d0d;
     padding: 10px 0;
     text-align: center;
 }
@@ -35,13 +35,39 @@ nav ul li a:hover {
     transform: scale(1.1); /* Slight increase */
 }
 
-
 /* Hero Section */
+
+
+.clock {
+    text-align: right;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hero image slider animation */
 .hero {
-    background: url('images/clepw.webp') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
     color: white;
     padding: 50px 20px;
     text-align: center;
+    min-height: 300px;
+}
+
+/* Dark theme overrides */
+body.dark-theme,
+body.dark-theme footer,
+body.dark-theme .hero,
+body.dark-theme .sidebar,
+body.dark-theme .intro {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-theme nav ul li a:hover {
+    background-color: #444;
 }
 
 /* Main Content Section */
@@ -53,15 +79,43 @@ nav ul li a:hover {
 
 .intro {
     flex: 2;
-    padding: 20px;
+    padding: 10px;
 }
 
 .sidebar {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
+    flex: 2;
+    padding: 10px;
+    
 }
-
+/* Dark theme */
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  /* FAQ Answer Toggle */
+  .answer {
+    display: none;
+  }
+  .answer.visible {
+    display: block;
+  }
+  
+  /* Back to Top Button Styling */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+    
 /* Contact Form */
 .contact-form {
     background: url('images/contact-bg.jpg') no-repeat center center/cover;
@@ -106,6 +160,21 @@ nav ul li a:hover {
     background-color: #45a049;
 }
 
+/* Success Message Styles */
+.success-message {
+    color: green;
+    background-color: #e0ffe0;
+    padding: 10px;
+    border-left: 5px solid rgb(69, 109, 69);
+    margin-top: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  /* You can keep other existing styles in the style.css file as you normally would */
+  
+
+
 /* Services Section Grid */
 .services {
     background: url('images/I.jpg') no-repeat center center/cover;
@@ -139,7 +208,7 @@ button {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 button:hover {
@@ -171,3 +240,4 @@ button:active {
         padding: 15px;
     }
 }
+
